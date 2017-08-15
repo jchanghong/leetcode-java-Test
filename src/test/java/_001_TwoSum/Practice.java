@@ -18,12 +18,26 @@
  */
 package _001_TwoSum;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /** see test {@link _001_TwoSum.PracticeTest } */
 public class Practice {
 
     public int[] twoSum(int[] nums, int target) {
         // TODO Auto-generated method stub
-        return null;
+        int[] ints = {0, 0};
+        Map<Integer, Integer> v2index = new HashMap<>();
+        for (int i=0;i<nums.length;i++) {
+            int other = target - nums[i];
+            if (v2index.containsKey(other)) {
+                ints[0] = v2index.get(other) + 1;
+                ints[1] = i + 1;
+                return ints;
+            }
+            v2index.put(nums[i], i);
+        }
+        return ints;
     }
 
 }
