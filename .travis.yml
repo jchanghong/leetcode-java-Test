@@ -1,0 +1,18 @@
+language: java
+sudo: false
+
+jdk:
+    - oraclejdk8
+
+#before_script:
+    ##cd to root directory for java
+    #- cd java
+   
+script:
+    - ant test > rep 
+
+after_script:
+    - rm -rf report
+    - rm rep 
+
+

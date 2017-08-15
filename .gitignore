@@ -1,0 +1,11 @@
+.project
+.classpath
+.settings
+bin
+*.class
+*.swp
+scripts
+NotComfortable.md
+Parse.java
+leetcode_java.md
+TEST-*
